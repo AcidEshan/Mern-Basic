@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="h-[100vh] w-full bg-[#FFD6E0] flex flex-col items-center justify-center">
+    <input class="border text-end  w-70 h-12 text-3xl font-semibold bg-gray-200 rounded-xl pr-1" id="display" type="text" value="" placeholder="" disabled>
+    <table class="w-70 text-center items-center border-separate border-spacing-2 mt-3">
+        <tr>
+            <td class="bg-orange-400 py-2 px-2 rounded-full text-white" onclick="clearButton()">Clear</td>
+            <td class="bg-orange-400 py-1 px-2 rounded-full text-white" onclick="del()"><i class="fa-solid fa-delete-left"></i></td>
+            <td class="bg-gray-700 py-1 px-2 rounded-full text-white">Mode</td>
+            <td class="bg-pink-800 py-1 px-2 rounded-full text-white">Alpha</td>
+            <td class="bg-gray-700 py-1 px-2 rounded-full text-white" onclick="turnOn()">ON</td>
+        </tr>
+    <tr>
+        <td class="bg-gray-700 py-1 px-2 rounded-full text-white" onclick="scicalc('Math.sqrt(')">√</td>
+        <td class="bg-gray-700 py-1 px-2 rounded-full text-white" onclick="scicalc('Math.log10(')">log</td>
+        <td class="bg-gray-700 py-1 px-2 rounded-full text-white" onclick="scicalc('Math.log(')">ln</td>
+        <td class="bg-gray-700 py-1 px-2 rounded-full text-white" onclick="scicalc('sinDeg(')">Sin</td>
+        <td class="bg-gray-700 py-1 px-2 rounded-full text-white" onclick="scicalc('cosDeg(')">cos</td>
+    </tr>
+    <tr>
+        <td class="bg-gray-700 py-1 px-2 rounded-full text-white" onclick="scicalc('tanDeg(')">tan</td>
+        <td class="bg-gray-700 py-1 px-2 rounded-full text-white" onclick="scicalc('cotDeg(')">cot</td>
+        <td class="bg-gray-700 py-1 px-2 rounded-full text-white" onclick="scicalc('secDeg(')">sec</td>
+        <td class="bg-gray-700 py-1 px-2 rounded-full text-white" onclick="scicalc('cosecDeg(')">cosec</td>
+        <td class="bg-orange-400 py-1 px-2 rounded-full text-white">Shift</td>
+    </tr>
+    <tr>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white" onclick="numButton(7)">7</td>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white" onclick="numButton(8)">8</td>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white" onclick="numButton(9)">9</td>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white" onclick="numButton('*')"><i class="fa-solid fa-xmark"></i></td>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white" onclick="numButton('/')"><i class="fa-solid fa-divide"></i></td>
+    </tr>
+    <tr>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white" onclick="numButton(4)">4</td>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white" onclick="numButton(5)">5</td>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white" onclick="numButton(6)">6</td>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white" onclick="numButton('+')"><i class="fa-solid fa-plus"></i></td>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white" onclick="numButton('-')"><i class="fa-solid fa-minus"></i></td>
+    </tr>
+    <tr>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white" onclick="numButton(1)">1</td>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white" onclick="numButton(2)">2</td>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white" onclick="numButton(3)">3</td>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white"onclick="numButton('.')">.</td>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white"onclick="calc()"><i class="fa-solid fa-equals"></i></td>
+    </tr>
+    <tr>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white"onclick="numButton(0)">0</td>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white"onclick="numButton('00')">00</td>
+        <td class="bg-orange-400 py-1 px-2 rounded-full text-white">π</td>
+        <td class="bg-gray-500 py-1 px-2 rounded-full text-white" onclick="numButton(')')">)</td>
+        <td class="bg-red-700 py-1 px-2 rounded-full text-white" onclick="turnOff()">OFF</td>
+    </tr>
+    <script src="script.js"></script>
+
+    </table>
+</div>
+</body>
+</html>
